@@ -16,8 +16,7 @@
 <form action="{{url_for('pets.edit', pid=id)}}" method="POST">
   <div class="mb-3">
     <label for = "description" class="form-label">Description</label><br/>
-    <textarea rows="10" id="description" class="form-control"
-              name="description">
+    <textarea rows="10" id="description" class="form-control" name="description">
       {{description}}
     </textarea>
   </div>
@@ -25,7 +24,9 @@
   <div class="mb-3">
     <div class="form-check">
       {# TODO  Add sold checkbox here #}
-      <label class="form-check-label" for="sold" > Sold </label>
+      <label class="form-check-label" for="sold" > Sold on : 
+      <input type="date" name="sold" id="sold">
+    </label>
     </div>
   </div>
 
