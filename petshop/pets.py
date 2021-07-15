@@ -27,7 +27,7 @@ def search(field, value):
         f"select p.id, p.name, p.bought, p.sold, s.name from pet p, animal s where p.id IN (select tp.pet from tags_pets tp, tag t where t.name=? and tp.tag=t.id) and p.species = s.id order by p.id", [value])
 
     pets = cursor.fetchall()
-    return render_template('index.html', pets=pets, order="asc")
+    return render_template('search.html', pets=pets, order="asc")
 
 
 @bp.route("/")
